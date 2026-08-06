@@ -41,7 +41,7 @@ Website copy, legal policies, product descriptions, logos, and other brand or ed
 
 ## Company
 
-KiTech Software is a trading name of **KI TECH LIMITED**, a private limited company registered in England and Wales under company number **10528257**.
+The company's legal name is **KITECH SOFTWARE LTD**, a private limited company registered in England and Wales under company number **10528257**.
 
 Registered office: Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE.
 
