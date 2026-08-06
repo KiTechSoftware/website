@@ -15,6 +15,28 @@ const {
 
 const canonicalUrl = new URL(canonicalPath, Astro.site ?? Astro.url.origin);
 const currentYear = new Date().getFullYear();
+const organisation = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'KiTech Software',
+  legalName: 'KI TECH LIMITED',
+  url: 'https://kitechsoftware.com',
+  email: 'hello@kitechsoftware.com',
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'Companies House',
+    value: '10528257',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Unit 82a James Carter Road',
+    addressLocality: 'Mildenhall',
+    addressRegion: 'Bury St. Edmunds',
+    postalCode: 'IP28 7DE',
+    addressCountry: 'GB',
+  },
+  sameAs: ['https://github.com/KiTechSoftware'],
+};
 ---
 
 <!doctype html>
@@ -50,6 +72,7 @@ const currentYear = new Date().getFullYear();
       rel="stylesheet"
     />
 
+    <script type="application/ld+json" set:html={JSON.stringify(organisation)} />
     <script is:inline>
       (() => {
         const stored = localStorage.getItem('theme');
@@ -101,7 +124,7 @@ const currentYear = new Date().getFullYear();
           <a href="/#about">About</a>
           <a href="/#work">What we build</a>
           <a href="/#approach">Approach</a>
-          <a href="/legal/privacy/">Privacy</a>
+          <a href="/legal/">Legal</a>
           <a class="button button-small" href="/#contact">Partner with us</a>
         </nav>
       </div>
@@ -120,10 +143,13 @@ const currentYear = new Date().getFullYear();
         </a>
         <p>Independent software products and strategic partnerships.</p>
         <div class="footer-links">
+          <a class="footer-link" href="/legal/">Legal</a>
           <a class="footer-link" href="/legal/privacy/">Privacy</a>
           <a class="footer-link" href="https://github.com/KiTechSoftware" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-        <p>© {currentYear} KiTech Software. Registered in England and Wales. Company number 10528257.</p>
+        <p class="company-disclosure">
+          © {currentYear} KiTech Software. KiTech Software is a trading name of KI TECH LIMITED, a private limited company registered in England and Wales under company number 10528257. Registered office: Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE.
+        </p>
       </div>
     </footer>
 
