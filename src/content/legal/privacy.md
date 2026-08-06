@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
-description: How KI TECH LIMITED, trading as KiTech Software, collects, uses, shares, retains, and protects personal information across its websites, products, services, and selected partner applications.
-version: 1.0.0
+description: How KITECH SOFTWARE LTD collects, uses, shares, retains, and protects personal information across its websites, products, services, and selected partner applications.
+version: 1.0.1
 lastUpdated: 2026-08-06
 effectiveDate: 2026-08-06
 draft: false
@@ -9,7 +9,7 @@ draft: false
 
 ## 1. Who we are
 
-KI TECH LIMITED is a private limited company registered in England and Wales under company number 10528257. We trade as **KiTech Software**.
+KITECH SOFTWARE LTD is a private limited company registered in England and Wales under company number 10528257.
 
 Our registered office is:
 
@@ -19,7 +19,7 @@ Our registered office is:
 > England  
 > IP28 7DE
 
-In this policy, “KiTech”, “we”, “our”, and “us” refer to KI TECH LIMITED unless a product-specific notice identifies another organisation as the controller of your personal information.
+In this policy, “KiTech”, “KiTech Software”, “we”, “our”, and “us” refer to KITECH SOFTWARE LTD unless a product-specific notice identifies another organisation as the controller of your personal information.
 
 You can contact us at [hello@kitechsoftware.com](mailto:hello@kitechsoftware.com).
 
@@ -35,7 +35,7 @@ This policy does not apply to third-party services that KiTech does not control.
 
 Our legal role depends on the service and how it is operated:
 
-- **KiTech-operated products:** KI TECH LIMITED will normally act as the data controller.
+- **KiTech-operated products:** KITECH SOFTWARE LTD will normally act as the data controller.
 - **Partner applications:** the partner, KiTech, or both organisations may act as controllers. KiTech may instead act only as a processor on the partner’s instructions. The application’s product-specific notice will identify the relevant roles.
 - **Customer-managed or self-hosted products:** the organisation operating the deployment will normally control the information processed within it. KiTech may have no access to that information unless support, diagnostics, hosting, or another service is requested.
 
@@ -255,7 +255,7 @@ The version, effective date, and last-updated date appear at the top of this pag
 
 Privacy enquiries and requests concerning information controlled by KiTech may be sent to:
 
-**KI TECH LIMITED trading as KiTech Software**  
+**KITECH SOFTWARE LTD**  
 Unit 82a James Carter Road  
 Mildenhall  
 Bury St. Edmunds  
