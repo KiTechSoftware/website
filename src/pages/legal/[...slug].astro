@@ -1,0 +1,67 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('legal', ({ data }) => !data.draft);
+
+  return entries.map((entry) => ({
+    params: {
+      slug: entry.id.replace(/\.(md|mdx)$/u, ''),
+    },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'legal'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const updated = entry.data.lastUpdated.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<BaseLayout
+  title={`${entry.data.title} | KiTech Software`}
+  description={entry.data.description}
+  canonicalPath={`/legal/${entry.id.replace(/\.(md|mdx)$/u, '')}/`}
+>
+  <main id="main-content" class="legal-page" tabindex="-1">
+    <div class="container legal-shell">
+      <aside class="legal-sidebar" aria-label="Legal navigation">
+        <p class="eyebrow">Company policies</p>
+        <nav>
+          <a class="active" href="/legal/privacy/">Privacy Policy</a>
+        </nav>
+      </aside>
+
+      <article class="legal-document">
+        <header class="legal-header">
+          <p class="eyebrow">KiTech Software legal</p>
+          <h1>{entry.data.title}</h1>
+          <p>{entry.data.description}</p>
+          <dl class="document-meta">
+            <div>
+              <dt>Version</dt>
+              <dd>{entry.data.version}</dd>
+            </div>
+            <div>
+              <dt>Last updated</dt>
+              <dd>{updated}</dd>
+            </div>
+          </dl>
+        </header>
+
+        <div class="legal-content">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
