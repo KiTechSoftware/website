@@ -1,7 +1,7 @@
 ---
 title: Terms of Service
 description: Company-wide terms governing access to KiTech Software websites, products, services, and selected partner applications.
-version: 1.0.0
+version: 1.0.1
 lastUpdated: 2026-08-06
 effectiveDate: 2026-08-06
 draft: false
@@ -11,9 +11,9 @@ draft: false
 
 ## 1. About these Terms
 
-These Terms of Service (the **Terms**) govern your access to and use of websites, applications, software products, cloud services, APIs, documentation, support channels, and other services provided by KI TECH LIMITED under the KiTech Software trading name (**KiTech**, **we**, **our**, or **us**).
+These Terms of Service (the **Terms**) govern your access to and use of websites, applications, software products, cloud services, APIs, documentation, support channels, and other services provided by KITECH SOFTWARE LTD (**KiTech Software**, **KiTech**, **we**, **our**, or **us**).
 
-KI TECH LIMITED is a private limited company registered in England and Wales under company number 10528257. Its registered office is Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE.
+KITECH SOFTWARE LTD is a private limited company registered in England and Wales under company number 10528257. Its registered office is Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE.
 
 By accessing or using a service covered by these Terms, you agree to these Terms. If you do not agree, you must not use that service.
 
@@ -254,7 +254,7 @@ These Terms, together with applicable product terms, orders, and policies, form 
 Questions about these Terms may be sent to:
 
 **Email:** hello@kitechsoftware.com  
-**Post:** KI TECH LIMITED, Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE
+**Post:** KITECH SOFTWARE LTD, Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE
 
 ## Related Documents
 
