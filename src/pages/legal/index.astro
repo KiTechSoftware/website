@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const policies = (await getCollection('legal', ({ data }) => !data.draft)).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title, 'en-GB'),
+);
+---
+
+<BaseLayout
+  title="Legal and Company Policies | KiTech Software"
+  description="Company-wide legal, privacy, security, and data-handling policies for KiTech Software products and services."
+  canonicalPath="/legal/"
+>
+  <main id="main-content" class="legal-index" tabindex="-1">
+    <div class="container">
+      <header class="legal-index-header">
+        <p class="eyebrow">Legal and trust</p>
+        <h1>Company policies</h1>
+        <p>
+          These company-wide policies apply across KiTech Software websites, products, services, and selected partner applications unless a product-specific notice states otherwise.
+        </p>
+      </header>
+
+      <div class="policy-grid">
+        {policies.map((policy) => (
+          <article class="policy-card">
+            <h2>{policy.data.title}</h2>
+            <p>{policy.data.description}</p>
+            <dl>
+              <div>
+                <dt>Version</dt>
+                <dd>{policy.data.version}</dd>
+              </div>
+              <div>
+                <dt>Updated</dt>
+                <dd>{policy.data.lastUpdated.toLocaleDateString('en-GB')}</dd>
+              </div>
+            </dl>
+            <a href={`/legal/${policy.id}/`}>Read policy <span aria-hidden="true">→</span></a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </main>
+</BaseLayout>
