@@ -44,3 +44,100 @@ const policies = (await getCollection('legal', ({ data }) => !data.draft)).sort(
     </div>
   </main>
 </BaseLayout>
+
+<style>
+  .legal-index {
+    min-height: 70vh;
+    padding: 88px 0 112px;
+    background: linear-gradient(180deg, var(--surface-grad-a), var(--surface));
+  }
+
+  .legal-index-header {
+    max-width: 800px;
+    margin-bottom: 52px;
+  }
+
+  .legal-index-header h1 {
+    max-width: none;
+    font-size: clamp(3rem, 7vw, 5.4rem);
+  }
+
+  .legal-index-header > p:last-child {
+    max-width: 720px;
+    color: var(--muted);
+    font-size: 1.12rem;
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .policy-card {
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .policy-card:hover,
+  .policy-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+
+  .policy-card h2 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    letter-spacing: -0.035em;
+  }
+
+  .policy-card > p {
+    color: var(--muted);
+  }
+
+  .policy-card dl {
+    display: flex;
+    gap: 28px;
+    margin: auto 0 26px;
+  }
+
+  .policy-card dl div {
+    display: grid;
+    gap: 2px;
+  }
+
+  .policy-card dt {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .policy-card dd {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .policy-card > a {
+    color: var(--accent-secondary);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  @media (max-width: 760px) {
+    .legal-index {
+      padding: 68px 0 88px;
+    }
+
+    .policy-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
