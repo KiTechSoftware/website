@@ -1,14 +1,14 @@
 # Licence Scope
 
-Copyright 2016-2026 KI TECH LIMITED.
+Copyright 2016-2026 KITECH SOFTWARE LTD.
 
 The Apache License 2.0 in `LICENSE` applies to the software portions of this repository, including application source code, reusable templates, stylesheets, configuration, build automation, and technical documentation, except where a file or directory states different terms.
 
 ## Material not licensed under Apache 2.0
 
-The Apache License 2.0 does not apply to the following material unless KI TECH LIMITED expressly states otherwise in writing:
+The Apache License 2.0 does not apply to the following material unless KITECH SOFTWARE LTD expressly states otherwise in writing:
 
-- the names **KiTech Software**, **KI TECH**, **KI TECH LIMITED**, and KiTech product or service names;
+- the names **KiTech Software**, **KITECH SOFTWARE LTD**, **KI TECH**, the former legal name **KI TECH LIMITED**, and KiTech product or service names;
 - logos, icons, visual identity systems, colour systems used as brand identifiers, trade dress, slogans, and other brand assets;
 - domain names and social-media identifiers;
 - website marketing copy, company descriptions, product descriptions, case studies, and other editorial content;
@@ -16,7 +16,7 @@ The Apache License 2.0 does not apply to the following material unless KI TECH L
 - customer, partner, employee, or commercially confidential material; and
 - third-party material governed by separate terms.
 
-Those excluded materials are proprietary to KI TECH LIMITED or their respective owners and are provided for viewing, reference, and operation of the official KiTech Software website. No permission to reproduce, adapt, distribute, endorse, impersonate, or create a confusingly similar brand is granted by this repository.
+Those excluded materials are proprietary to KITECH SOFTWARE LTD or their respective owners and are provided for viewing, reference, and operation of the official KiTech Software website. No permission to reproduce, adapt, distribute, endorse, impersonate, or create a confusingly similar brand is granted by this repository.
 
 ## Mixed files
 
