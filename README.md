@@ -1,52 +1,48 @@
 # KiTech Software Website
 
-The public KiTech Software website is a static Astro site deployed to GitHub Pages.
+This repository contains the official public website for [KiTech Software](https://kitechsoftware.com).
 
-## Requirements
+KiTech Software builds and maintains secure software products for its own portfolio and selected strategic partners. The website presents the company, its approach, public policies, product information, and open-source work.
 
-- Node.js 22 or newer
-- npm 11 or newer
+## Website scope
 
-## Local development
+The site provides:
 
-```sh
-npm install
-npm run dev
-```
+- company and product information;
+- legal, privacy, and trust documentation;
+- public contact and security information;
+- product-specific policy and documentation entry points; and
+- links to KiTech Software open-source projects.
 
-Astro starts the local development server at `http://localhost:4321` by default.
+The production site is built with Astro and published as a static website through GitHub Pages.
 
-## Production build
+## Repository structure
 
-```sh
-npm run build
-npm run preview
-```
+- `src/pages/` — website routes;
+- `src/layouts/` — shared page layouts;
+- `src/styles/` — global presentation styles;
+- `src/content/legal/` — company-wide legal and policy documents;
+- `public/` — files published without transformation; and
+- `.github/` — repository ownership and automation configuration.
 
-The static production site is generated in `dist/`.
+## Contributing
 
-## Content
+Development setup, validation requirements, content rules, and the contribution process are documented in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Company policies are stored as Markdown under:
+Repository changes are reviewed by the KiTech Software Open Sorcerers Society team as defined in `.github/CODEOWNERS`.
 
-```text
-src/content/legal/
-```
+## Licence and brand
 
-Product-specific documentation will be stored under:
+The software source code in this repository is available under the [Apache License 2.0](LICENSE), subject to the scope described in [LICENSE-SCOPE.md](LICENSE-SCOPE.md).
 
-```text
-src/content/products/<product>/
-```
+The licence does not grant permission to use KiTech Software names, logos, product names, service marks, domain names, visual identity, or other brand assets. See [TRADEMARKS.md](TRADEMARKS.md).
 
-Legal documents use frontmatter validated by `src/content.config.ts` and are rendered automatically under `/legal/`.
-
-## Deployment
-
-- Pushes to `mvp` run the Astro validation workflow.
-- Production deployment remains restricted to `main`.
-- GitHub Pages publishes the generated `dist/` directory.
+Website copy, legal policies, product descriptions, logos, and other brand or editorial material are not licensed for reuse unless expressly stated.
 
 ## Company
 
-KiTech Software is a trading name of KI TECH LIMITED, registered in England and Wales under company number 10528257.
+KiTech Software is a trading name of **KI TECH LIMITED**, a private limited company registered in England and Wales under company number **10528257**.
+
+Registered office: Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE.
+
+The official Companies House record is available at <https://find-and-update.company-information.service.gov.uk/company/10528257>.
