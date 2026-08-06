@@ -4,21 +4,22 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('legal', ({ data }) => !data.draft);
+  const entries = (await getCollection('legal', ({ data }) => !data.draft)).sort((a, b) =>
+    a.data.title.localeCompare(b.data.title, 'en-GB'),
+  );
 
   return entries.map((entry) => ({
-    params: {
-      slug: entry.id.replace(/\.(md|mdx)$/u, ''),
-    },
-    props: { entry },
+    params: { slug: entry.id },
+    props: { entry, navigation: entries },
   }));
 }
 
 interface Props {
   entry: CollectionEntry<'legal'>;
+  navigation: CollectionEntry<'legal'>[];
 }
 
-const { entry } = Astro.props;
+const { entry, navigation } = Astro.props;
 const { Content } = await render(entry);
 const updated = entry.data.lastUpdated.toLocaleDateString('en-GB', {
   day: 'numeric',
@@ -30,14 +31,19 @@ const updated = entry.data.lastUpdated.toLocaleDateString('en-GB', {
 <BaseLayout
   title={`${entry.data.title} | KiTech Software`}
   description={entry.data.description}
-  canonicalPath={`/legal/${entry.id.replace(/\.(md|mdx)$/u, '')}/`}
+  canonicalPath={`/legal/${entry.id}/`}
 >
   <main id="main-content" class="legal-page" tabindex="-1">
     <div class="container legal-shell">
       <aside class="legal-sidebar" aria-label="Legal navigation">
         <p class="eyebrow">Company policies</p>
         <nav>
-          <a class="active" href="/legal/privacy/">Privacy Policy</a>
+          <a href="/legal/">All policies</a>
+          {navigation.map((policy) => (
+            <a class:list={{ active: policy.id === entry.id }} href={`/legal/${policy.id}/`}>
+              {policy.data.title}
+            </a>
+          ))}
         </nav>
       </aside>
 
