@@ -1,0 +1,170 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+} = Astro.props;
+
+const canonicalUrl = new URL(canonicalPath, Astro.site ?? Astro.url.origin);
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <title>{title}</title>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="KiTech Software" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 36 36%22><rect width=%2236%22 height=%2236%22 rx=%2211%22 fill=%22%239a3c09%22/><text x=%2218%22 y=%2225%22 font-family=%22sans-serif%22 font-size=%2220%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>K</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const theme = stored ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="/" aria-label="KiTech Software home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>
+            <span class="brand-name-orange">KiTech</span>
+            <span class="brand-name-green">Software</span>
+          </span>
+        </a>
+
+        <div class="nav-controls">
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <line x1="12" y1="1.5" x2="12" y2="4" />
+                <line x1="12" y1="20" x2="12" y2="22.5" />
+                <line x1="1.5" y1="12" x2="4" y2="12" />
+                <line x1="20" y1="12" x2="22.5" y2="12" />
+                <line x1="4.4" y1="4.4" x2="6.1" y2="6.1" />
+                <line x1="17.9" y1="17.9" x2="19.6" y2="19.6" />
+                <line x1="4.4" y1="19.6" x2="6.1" y2="17.9" />
+                <line x1="17.9" y1="6.1" x2="19.6" y2="4.4" />
+              </g>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M20.5 14.7A8.5 8.5 0 0 1 9.3 3.5a8.5 8.5 0 1 0 11.2 11.2Z" />
+            </svg>
+          </button>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="/#about">About</a>
+          <a href="/#work">What we build</a>
+          <a href="/#approach">Approach</a>
+          <a href="/legal/privacy/">Privacy</a>
+          <a class="button button-small" href="/#contact">Partner with us</a>
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand footer-brand" href="/">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>
+            <span class="brand-name-orange">KiTech</span>
+            <span class="brand-name-green">Software</span>
+          </span>
+        </a>
+        <p>Independent software products and strategic partnerships.</p>
+        <div class="footer-links">
+          <a class="footer-link" href="/legal/privacy/">Privacy</a>
+          <a class="footer-link" href="https://github.com/KiTechSoftware" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <p>© {currentYear} KiTech Software. Registered in England and Wales. Company number 10528257.</p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+      const nav = document.querySelector<HTMLElement>('.site-nav');
+
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        nav.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            nav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.focus();
+          }
+        });
+      }
+
+      const themeToggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
+      if (themeToggle) {
+        const root = document.documentElement;
+        themeToggle.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+
+        themeToggle.addEventListener('click', () => {
+          const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = nextTheme;
+          localStorage.setItem('theme', nextTheme);
+          themeToggle.setAttribute('aria-pressed', String(nextTheme === 'dark'));
+        });
+      }
+    </script>
+  </body>
+</html>
