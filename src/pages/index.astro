@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'KiTech Software | Software Products Built for the Long Term';
+const description = 'KiTech Software is a UK software company building secure SaaS products and purpose-built software for our own portfolio and selected strategic partners.';
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/">
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Independent UK software company</p>
+          <h1>We build software products designed to last.</h1>
+          <p class="hero-lead">
+            KiTech Software creates secure SaaS applications and purpose-built software for our own portfolio and selected strategic partners.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#work">Explore what we build</a>
+            <a class="text-link" href="#contact">Discuss a partnership <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="status-dot" aria-hidden="true"></span>
+            Product-led. Security-conscious. Built for long-term ownership.
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="KiTech Software capabilities">
+          <div class="panel-glow"></div>
+          <div class="code-card">
+            <div class="code-card-head">
+              <span></span><span></span><span></span>
+              <small>product.system</small>
+            </div>
+            <div class="code-lines" aria-hidden="true">
+              <p><span class="code-key">company</span>: <span class="code-value">"KiTech Software"</span></p>
+              <p><span class="code-key">focus</span>: [</p>
+              <p class="indent"><span class="code-value">"SaaS products"</span>,</p>
+              <p class="indent"><span class="code-value">"partner platforms"</span>,</p>
+              <p class="indent"><span class="code-value">"secure infrastructure"</span></p>
+              <p>]</p>
+              <p><span class="code-key">model</span>: <span class="code-value">"build, own, evolve"</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-light">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Who we are</p>
+          <h2>A software company, not a conventional agency.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            We do not operate as a general-purpose development shop. Our work is focused on products we own, ventures we support, and long-term partnerships where technology is central to the business.
+          </p>
+          <p>
+            That focus allows us to make stronger architectural decisions, invest in maintainability, and build systems that can evolve over years rather than only reach a launch date.
+          </p>
+          <p>
+            We also support open source and maintain tools publicly on <a class="inline-link" href="https://github.com/KiTechSoftware" target="_blank" rel="noopener noreferrer">GitHub</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">What we build</p>
+          <h2>Software with a clear purpose and owner.</h2>
+          <p>We concentrate on a small number of product categories where deep technical ownership matters.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <span class="card-number">01</span>
+            <h3>Our SaaS products</h3>
+            <p>We design, build, operate, and continuously improve software products under the KiTech Software portfolio.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-number">02</span>
+            <h3>Partner products</h3>
+            <p>We build and maintain selected applications for partners where the relationship extends beyond a one-off client engagement.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-number">03</span>
+            <h3>Platform foundations</h3>
+            <p>We build reusable infrastructure, developer tooling, identity systems, and secure service foundations for ambitious products.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section approach-section">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="eyebrow">How we work</p>
+          <h2>Long-term thinking at every layer.</h2>
+        </div>
+
+        <div class="principles">
+          <div class="principle">
+            <h3>Product first</h3>
+            <p>Every technical decision starts with the product, its users, and the business it supports.</p>
+          </div>
+          <div class="principle">
+            <h3>Secure by design</h3>
+            <p>Security, privacy, and operational resilience are architectural concerns, not final-stage additions.</p>
+          </div>
+          <div class="principle">
+            <h3>Built to evolve</h3>
+            <p>We favour clear boundaries, maintainable systems, and technology choices that support sustainable growth.</p>
+          </div>
+          <div class="principle">
+            <h3>Selective partnerships</h3>
+            <p>We partner where incentives, ownership, and long-term goals are aligned.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section statement-section">
+      <div class="container statement">
+        <p class="eyebrow">Our position</p>
+        <blockquote>
+          “We build software we believe should exist, then take responsibility for making it dependable.”
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Work with KiTech</p>
+          <h2>Building something that needs a committed software partner?</h2>
+          <p>We are open to conversations with organisations and founders looking for a long-term product relationship.</p>
+        </div>
+        <a class="button button-light" href="mailto:hello@kitechsoftware.com">hello@kitechsoftware.com</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
