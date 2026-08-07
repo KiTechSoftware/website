@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Accessibility | KiTech Software"
+  description="Accessibility commitments and contact information for the KiTech Software website and products."
+  canonicalPath="/accessibility/"
+>
+  <main id="main-content" class="info-page" tabindex="-1">
+    <div class="container narrow">
+      <p class="eyebrow">Accessibility</p>
+      <h1>Software should work for more people</h1>
+      <p class="lead">
+        KiTech Software aims to make its public website and products usable by people with a wide range of abilities, devices, and assistive technologies.
+      </p>
+
+      <section class="panel">
+        <h2>Our approach</h2>
+        <p>We consider accessibility during design, implementation, review, and maintenance. Depending on the product, this may include:</p>
+        <ul>
+          <li>semantic structure and meaningful labels;</li>
+          <li>keyboard operation and visible focus indicators;</li>
+          <li>readable contrast and scalable text;</li>
+          <li>support for screen readers and platform accessibility APIs;</li>
+          <li>responsive layouts and reflow;</li>
+          <li>reduced-motion preferences;</li>
+          <li>captions, transcripts, or alternatives for media where applicable; and</li>
+          <li>testing with automated tools and representative manual checks.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Current website features</h2>
+        <p>The public website includes a skip link, keyboard-accessible navigation, visible focus states, responsive layouts, light and dark appearance support, semantic headings, and reduced-motion considerations.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Report an accessibility problem</h2>
+        <p>
+          Email <a href="mailto:hello@kitechsoftware.com?subject=Accessibility%20feedback">hello@kitechsoftware.com</a> with the subject <strong>Accessibility feedback</strong>.
+        </p>
+        <p>Include the page or product, the task you were trying to complete, the problem encountered, and any browser, device, operating system, or assistive technology information you are comfortable sharing.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Alternative access</h2>
+        <p>If a page, document, or feature is not accessible to you, contact us and describe the information or task you need. We will consider a reasonable alternative format or method where practicable.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Ongoing work</h2>
+        <p>Accessibility is an ongoing process. We prioritise issues based on user impact, severity, frequency, legal requirements, and the complexity of a safe correction.</p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
+  .narrow { max-width: 860px; }
+  h1 { max-width: 800px; font-size: clamp(3rem, 7vw, 5rem); }
+  .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
+  .panel { margin-top: 24px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .panel h2 { margin-bottom: 12px; }
+  li + li { margin-top: 8px; }
+  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } }
+</style>
