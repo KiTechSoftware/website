@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Delete an Account | KiTech Software"
+  description="Instructions for requesting deletion of a KiTech Software account and associated personal information."
+  canonicalPath="/support/delete-account/"
+>
+  <main id="main-content" class="info-page" tabindex="-1">
+    <div class="container narrow">
+      <p class="eyebrow">Account and data deletion</p>
+      <h1>Request account deletion</h1>
+      <p class="lead">
+        Use the account-deletion control inside the relevant application where one is available. You may also submit a deletion request by email.
+      </p>
+
+      <section class="panel">
+        <h2>Email request</h2>
+        <p>
+          Email <a href="mailto:hello@kitechsoftware.com?subject=Account%20deletion%20request">hello@kitechsoftware.com</a> with the subject <strong>Account deletion request</strong>.
+        </p>
+        <p>Include:</p>
+        <ul>
+          <li>the product or application name;</li>
+          <li>the email address or username associated with the account;</li>
+          <li>the organisation or deployment, where relevant; and</li>
+          <li>a brief description of what you want deleted.</li>
+        </ul>
+        <p>Do not send your password, recovery code, private key, or unnecessary identity documents.</p>
+      </section>
+
+      <section class="panel">
+        <h2>What happens next</h2>
+        <ol>
+          <li>We acknowledge the request and determine which product or organisation controls the account.</li>
+          <li>We may ask for proportionate verification to prevent unauthorised deletion.</li>
+          <li>We delete or anonymise eligible account data and close the account where KiTech controls it.</li>
+          <li>We confirm completion or explain any lawful limitation, retention requirement, or action required from another organisation.</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Organisation-managed and self-hosted accounts</h2>
+        <p>
+          An employer, customer, school, charity, community, partner, or self-hosted operator may control your account and data. In that case, the relevant organisation must normally action the request. KiTech will direct you to the responsible operator where possible.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Retention after deletion</h2>
+        <p>
+          Limited information may remain where required for legal obligations, fraud prevention, safeguarding, security, disputes, or protected backups awaiting scheduled expiry. See the <a href="/legal/data-deletion/">Data Deletion Policy</a> and <a href="/legal/data-retention/">Data Retention Policy</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
+  .narrow { max-width: 860px; }
+  h1 { max-width: 760px; font-size: clamp(3rem, 7vw, 5rem); }
+  .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
+  .panel { margin-top: 24px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .panel h2 { margin-bottom: 12px; }
+  li + li { margin-top: 8px; }
+  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } }
+</style>
