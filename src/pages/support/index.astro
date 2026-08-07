@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Support | KiTech Software"
+  description="Contact KiTech Software for product support, account assistance, privacy requests, safety concerns, and security reports."
+  canonicalPath="/support/"
+>
+  <main id="main-content" class="info-page" tabindex="-1">
+    <div class="container narrow">
+      <p class="eyebrow">Support</p>
+      <h1>How can we help?</h1>
+      <p class="lead">
+        Contact KiTech Software for product support, account access, billing questions, privacy requests, safety concerns, or technical problems.
+      </p>
+
+      <section class="panel">
+        <h2>Contact support</h2>
+        <p>Email <a href="mailto:hello@kitechsoftware.com">hello@kitechsoftware.com</a>.</p>
+        <p>Include the product name, platform, application version, a description of the problem, and any non-sensitive error details that may help us investigate.</p>
+        <p>Do not send passwords, recovery codes, private keys, payment-card details, or unnecessary personal information.</p>
+      </section>
+
+      <div class="card-grid">
+        <article class="card">
+          <h2>Account deletion</h2>
+          <p>Request deletion of an account and associated personal information.</p>
+          <a href="/support/delete-account/">Deletion instructions <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h2>Privacy choices</h2>
+          <p>Exercise privacy rights or ask how your information is handled.</p>
+          <a href="/privacy/choices/">Privacy request options <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h2>Security</h2>
+          <p>Report a suspected vulnerability through the responsible-disclosure process.</p>
+          <a href="/security/">Security information <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h2>Safety and abuse</h2>
+          <p>Report harmful content, abuse, community violations, or a child-safety concern.</p>
+          <a href="/legal/community-guidelines/">Reporting guidance <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+
+      <section class="panel">
+        <h2>Postal contact</h2>
+        <address>
+          KITECH SOFTWARE LTD<br />
+          Unit 82a James Carter Road<br />
+          Mildenhall<br />
+          Bury St. Edmunds<br />
+          England<br />
+          IP28 7DE
+        </address>
+        <p>Company number: 10528257.</p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
+  .narrow { max-width: 920px; }
+  h1 { max-width: 760px; font-size: clamp(3rem, 7vw, 5rem); }
+  .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
+  .panel, .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .panel { margin-top: 32px; padding: 32px; }
+  .panel h2, .card h2 { margin-bottom: 10px; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+  .card { display: flex; min-height: 220px; flex-direction: column; padding: 28px; }
+  .card p { color: var(--muted); }
+  .card a { margin-top: auto; color: var(--accent-secondary); font-weight: 700; text-decoration: none; }
+  address { font-style: normal; line-height: 1.7; }
+  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } .card-grid { grid-template-columns: 1fr; } }
+</style>
