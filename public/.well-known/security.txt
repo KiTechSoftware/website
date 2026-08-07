@@ -1,4 +1,5 @@
 Contact: mailto:hello@kitechsoftware.com
 Expires: 2027-08-06T00:00:00Z
 Canonical: https://kitechsoftware.com/.well-known/security.txt
+Policy: https://kitechsoftware.com/legal/responsible-disclosure/
 Preferred-Languages: en
