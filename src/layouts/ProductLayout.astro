@@ -1,0 +1,172 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  productName: string;
+  productSlug: string;
+  pageTitle: string;
+  description: string;
+  canonicalPath: string;
+  active: 'overview' | 'support' | 'privacy' | 'delete-account';
+}
+
+const {
+  productName,
+  productSlug,
+  pageTitle,
+  description,
+  canonicalPath,
+  active,
+} = Astro.props;
+
+const links = [
+  { key: 'overview', label: 'Overview', href: `/products/${productSlug}/` },
+  { key: 'support', label: 'Support', href: `/products/${productSlug}/support/` },
+  { key: 'privacy', label: 'Privacy', href: `/products/${productSlug}/privacy/` },
+  { key: 'delete-account', label: 'Delete account', href: `/products/${productSlug}/delete-account/` },
+] as const;
+---
+
+<BaseLayout
+  title={`${pageTitle} | ${productName} | KiTech Software`}
+  description={description}
+  canonicalPath={canonicalPath}
+>
+  <main id="main-content" class="product-page" tabindex="-1">
+    <div class="container product-shell">
+      <header class="product-header">
+        <p class="eyebrow">{productName}</p>
+        <h1>{pageTitle}</h1>
+        <p class="lead">{description}</p>
+      </header>
+
+      <nav class="product-nav" aria-label={`${productName} information`}>
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class:list={{ active: active === link.key }}
+            aria-current={active === link.key ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <article class="product-content">
+        <slot />
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .product-page {
+    min-height: 70vh;
+    padding: 88px 0 112px;
+    background: linear-gradient(180deg, var(--surface-grad-a), var(--surface));
+  }
+
+  .product-shell {
+    max-width: 920px;
+  }
+
+  .product-header {
+    max-width: 800px;
+  }
+
+  .product-header h1 {
+    max-width: none;
+    font-size: clamp(3rem, 7vw, 5rem);
+  }
+
+  .lead {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.18rem;
+  }
+
+  .product-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 36px 0 24px;
+  }
+
+  .product-nav a {
+    padding: 11px 15px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--card-bg);
+  }
+
+  .product-nav a:hover,
+  .product-nav a:focus-visible,
+  .product-nav a.active {
+    color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+  }
+
+  .product-content {
+    padding: 34px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card-bg);
+  }
+
+  .product-content :global(h2) {
+    margin-top: 34px;
+    margin-bottom: 12px;
+  }
+
+  .product-content :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .product-content :global(h3) {
+    margin-top: 26px;
+  }
+
+  .product-content :global(p),
+  .product-content :global(li) {
+    color: var(--muted);
+  }
+
+  .product-content :global(ul),
+  .product-content :global(ol) {
+    padding-left: 1.35rem;
+  }
+
+  .product-content :global(a) {
+    color: var(--accent-secondary);
+    text-underline-offset: 0.2em;
+  }
+
+  .product-content :global(.actions) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .product-content :global(.actions a) {
+    display: inline-flex;
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  @media (max-width: 720px) {
+    .product-page {
+      padding: 68px 0 88px;
+    }
+
+    .product-content {
+      padding: 26px;
+    }
+  }
+</style>
