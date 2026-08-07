@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Products | KiTech Software"
+  description="Product information, support, privacy, and account-management entry points for KiTech Software applications."
+  canonicalPath="/products/"
+>
+  <main id="main-content" class="info-page" tabindex="-1">
+    <div class="container narrow">
+      <p class="eyebrow">Products</p>
+      <h1>Product information and policies</h1>
+      <p class="lead">
+        Each publicly released KiTech Software application will provide direct links to its support information, product-specific privacy notice, and account-deletion instructions where accounts are supported.
+      </p>
+
+      <section class="panel">
+        <h2>Company-wide information</h2>
+        <div class="link-grid">
+          <a href="/support/">Support</a>
+          <a href="/legal/privacy/">Privacy Policy</a>
+          <a href="/legal/terms/">Terms of Service</a>
+          <a href="/support/delete-account/">Account deletion</a>
+          <a href="/privacy/choices/">Privacy choices</a>
+          <a href="/security/">Security</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Product-specific pages</h2>
+        <p>
+          Product pages are published when a product is prepared for public distribution. A product-specific notice supplements the company-wide policies and identifies the application's actual data collection, permissions, service providers, retention, deletion, regional hosting, support arrangements, and responsible organisations.
+        </p>
+        <p>
+          Store listings and applications should link directly to the relevant product page rather than relying only on this index.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Need help identifying a product?</h2>
+        <p>
+          Email <a href="mailto:hello@kitechsoftware.com?subject=Product%20support">hello@kitechsoftware.com</a> with the application name, platform, and developer name displayed in the store listing.
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
+  .narrow { max-width: 900px; }
+  h1 { max-width: 800px; font-size: clamp(3rem, 7vw, 5rem); }
+  .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
+  .panel { margin-top: 24px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .panel h2 { margin-bottom: 12px; }
+  .link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .link-grid a { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; color: var(--accent-secondary); font-weight: 700; text-decoration: none; }
+  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } .link-grid { grid-template-columns: 1fr; } }
+</style>
