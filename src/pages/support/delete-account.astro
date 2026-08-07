@@ -12,13 +12,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p class="eyebrow">Account and data deletion</p>
       <h1>Request account deletion</h1>
       <p class="lead">
-        Use the account-deletion control inside the relevant application where one is available. You may also submit a deletion request by email.
+        Use the direct instructions for the relevant product. Product-specific pages explain who controls the account, what can be deleted, and what may need to be retained.
       </p>
 
       <section class="panel">
-        <h2>Email request</h2>
+        <h2>Choose a product</h2>
+        <div class="product-links">
+          <a href="/products/secdoma/delete-account/">
+            <strong>Delete a SecDoma account</strong>
+            <span>Instructions for SecDoma Cloud, organisation-managed, and self-hosted accounts.</span>
+          </a>
+          <a href="/products/bantay-mail/delete-account/">
+            <strong>Delete a Bantay Mail mailbox or account</strong>
+            <span>Instructions for self-hosted deployments and KiTech-operated services.</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>General email request</h2>
         <p>
-          Email <a href="mailto:hello@kitechsoftware.com?subject=Account%20deletion%20request">hello@kitechsoftware.com</a> with the subject <strong>Account deletion request</strong>.
+          When you cannot use a product-specific route or in-app deletion control, email <a href="mailto:hello@kitechsoftware.com?subject=Account%20deletion%20request">hello@kitechsoftware.com</a> with the subject <strong>Account deletion request</strong>.
         </p>
         <p>Include:</p>
         <ul>
@@ -64,6 +78,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
   .panel { margin-top: 24px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
   .panel h2 { margin-bottom: 12px; }
+  .product-links { display: grid; gap: 12px; }
+  .product-links a { display: grid; gap: 6px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; color: var(--accent-secondary); text-decoration: none; }
+  .product-links a:hover, .product-links a:focus-visible { border-color: var(--accent-secondary); }
+  .product-links span { color: var(--muted); }
   li + li { margin-top: 8px; }
   @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } }
 </style>
