@@ -12,12 +12,42 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p class="eyebrow">Products</p>
       <h1>Product information and policies</h1>
       <p class="lead">
-        Each publicly released KiTech Software application will provide direct links to its support information, product-specific privacy notice, and account-deletion instructions where accounts are supported.
+        Direct support, privacy, and account-management information for KiTech Software products prepared for public distribution.
       </p>
+
+      <section class="product-grid" aria-label="KiTech Software products">
+        <article class="product-card">
+          <p class="product-type">Communication and collaboration</p>
+          <h2>SecDoma</h2>
+          <p>
+            Secure communication and collaboration for personal accounts, organisations, managed cloud environments, and self-hosted deployments.
+          </p>
+          <div class="link-grid">
+            <a href="/products/secdoma/">Overview</a>
+            <a href="/products/secdoma/support/">Support</a>
+            <a href="/products/secdoma/privacy/">Privacy</a>
+            <a href="/products/secdoma/delete-account/">Delete account</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <p class="product-type">Email infrastructure</p>
+          <h2>Bantay Mail</h2>
+          <p>
+            Self-hosted email infrastructure for organisations that control their own mail, identity, authentication, and administration.
+          </p>
+          <div class="link-grid">
+            <a href="/products/bantay-mail/">Overview</a>
+            <a href="/products/bantay-mail/support/">Support</a>
+            <a href="/products/bantay-mail/privacy/">Privacy</a>
+            <a href="/products/bantay-mail/delete-account/">Delete account</a>
+          </div>
+        </article>
+      </section>
 
       <section class="panel">
         <h2>Company-wide information</h2>
-        <div class="link-grid">
+        <div class="link-grid company-links">
           <a href="/support/">Support</a>
           <a href="/legal/privacy/">Privacy Policy</a>
           <a href="/legal/terms/">Terms of Service</a>
@@ -25,16 +55,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <a href="/privacy/choices/">Privacy choices</a>
           <a href="/security/">Security</a>
         </div>
-      </section>
-
-      <section class="panel">
-        <h2>Product-specific pages</h2>
-        <p>
-          Product pages are published when a product is prepared for public distribution. A product-specific notice supplements the company-wide policies and identifies the application's actual data collection, permissions, service providers, retention, deletion, regional hosting, support arrangements, and responsible organisations.
-        </p>
-        <p>
-          Store listings and applications should link directly to the relevant product page rather than relying only on this index.
-        </p>
       </section>
 
       <section class="panel">
@@ -49,12 +69,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <style>
   .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
-  .narrow { max-width: 900px; }
+  .narrow { max-width: 980px; }
   h1 { max-width: 800px; font-size: clamp(3rem, 7vw, 5rem); }
   .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
-  .panel { margin-top: 24px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
-  .panel h2 { margin-bottom: 12px; }
-  .link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .link-grid a { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; color: var(--accent-secondary); font-weight: 700; text-decoration: none; }
-  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } .link-grid { grid-template-columns: 1fr; } }
+  .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 36px; }
+  .product-card, .panel { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .product-card { display: flex; flex-direction: column; }
+  .product-card h2, .panel h2 { margin-bottom: 12px; }
+  .product-card > p:not(.product-type), .panel p { color: var(--muted); }
+  .product-type { margin-bottom: 10px; color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .panel { margin-top: 24px; }
+  .link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: auto; padding-top: 20px; }
+  .link-grid a { padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; color: var(--accent-secondary); font-weight: 700; text-decoration: none; }
+  .link-grid a:hover, .link-grid a:focus-visible { border-color: var(--accent-secondary); }
+  .company-links { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0; padding-top: 0; }
+  @media (max-width: 760px) {
+    .info-page { padding: 68px 0 88px; }
+    .product-grid, .company-links { grid-template-columns: 1fr; }
+  }
 </style>
