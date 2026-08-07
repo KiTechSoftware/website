@@ -38,11 +38,3 @@ The software source code in this repository is available under the [Apache Licen
 The licence does not grant permission to use KiTech Software names, logos, product names, service marks, domain names, visual identity, or other brand assets. See [TRADEMARKS.md](TRADEMARKS.md).
 
 Website copy, legal policies, product descriptions, logos, and other brand or editorial material are not licensed for reuse unless expressly stated.
-
-## Company
-
-The company's legal name is **KITECH SOFTWARE LTD**, a private limited company registered in England and Wales under company number **10528257**.
-
-Registered office: Unit 82a James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE.
-
-The official Companies House record is available at <https://find-and-update.company-information.service.gov.uk/company/10528257>.
