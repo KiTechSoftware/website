@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Security | KiTech Software"
+  description="KiTech Software security principles, vulnerability reporting, and responsible disclosure information."
+  canonicalPath="/security/"
+>
+  <main id="main-content" class="info-page" tabindex="-1">
+    <div class="container narrow">
+      <p class="eyebrow">Security</p>
+      <h1>Report security issues responsibly</h1>
+      <p class="lead">
+        Security is a core engineering and operational requirement across KiTech Software products and services.
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h2>Security policy</h2>
+          <p>Read the principles used to design, operate, and maintain KiTech services.</p>
+          <a href="/legal/security/">Read the security policy <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h2>Responsible disclosure</h2>
+          <p>Follow the authorised process for reporting a suspected vulnerability.</p>
+          <a href="/legal/responsible-disclosure/">Read disclosure rules <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+
+      <section class="panel">
+        <h2>Report a suspected vulnerability</h2>
+        <p>
+          Email <a href="mailto:hello@kitechsoftware.com?subject=Security%20vulnerability%20report">hello@kitechsoftware.com</a> with the subject <strong>Security vulnerability report</strong>.
+        </p>
+        <p>Include the affected product, service, URL, repository, or version; the impact; reproducible steps; and a safe contact method.</p>
+        <p>Do not include passwords, private keys, active credentials, illegal content, or unnecessary personal information.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Machine-readable contact</h2>
+        <p>
+          Security contact metadata is published at <a href="/.well-known/security.txt">/.well-known/security.txt</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
+  .narrow { max-width: 900px; }
+  h1 { max-width: 800px; font-size: clamp(3rem, 7vw, 5rem); }
+  .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
+  .card, .panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .card { display: flex; min-height: 220px; flex-direction: column; padding: 28px; }
+  .card p { color: var(--muted); }
+  .card a { margin-top: auto; color: var(--accent-secondary); font-weight: 700; text-decoration: none; }
+  .panel { margin-top: 24px; padding: 30px; }
+  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } .card-grid { grid-template-columns: 1fr; } }
+</style>
