@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Choices | KiTech Software"
+  description="Options for exercising privacy rights and contacting KiTech Software about personal information."
+  canonicalPath="/privacy/choices/"
+>
+  <main id="main-content" class="info-page" tabindex="-1">
+    <div class="container narrow">
+      <p class="eyebrow">Privacy choices</p>
+      <h1>Manage your privacy rights</h1>
+      <p class="lead">
+        You may contact KiTech Software to ask how your personal information is used or to exercise a right available under applicable data-protection law.
+      </p>
+
+      <section class="panel">
+        <h2>Available requests</h2>
+        <ul>
+          <li>access personal information held about you;</li>
+          <li>correct inaccurate or incomplete information;</li>
+          <li>request deletion of eligible information;</li>
+          <li>restrict or object to certain processing;</li>
+          <li>request portable information where the right applies;</li>
+          <li>withdraw consent;</li>
+          <li>object to direct marketing; and</li>
+          <li>ask for human review of an eligible automated decision.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Submit a request</h2>
+        <p>
+          Email <a href="mailto:hello@kitechsoftware.com?subject=Privacy%20request">hello@kitechsoftware.com</a> with the subject <strong>Privacy request</strong>.
+        </p>
+        <p>Include the relevant product, account email or username, organisation or deployment, and the right you want to exercise.</p>
+        <p>Do not send passwords, recovery codes, private keys, or unnecessary identity documents.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Verification and response</h2>
+        <p>
+          We may need to verify your identity or authority before responding. We use proportionate verification and will explain when additional information is required.
+        </p>
+        <p>
+          Rights may be limited by lawful exemptions, another person's rights, legal obligations, security needs, or KiTech's role as a processor rather than controller.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Organisation-managed services</h2>
+        <p>
+          For employer, customer, partner, school, charity, community, or self-hosted accounts, the responsible organisation may control the information and must handle the request. We will direct you to that organisation where appropriate.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Complaints</h2>
+        <p>
+          You may complain to the UK Information Commissioner's Office or another competent data-protection authority. We encourage you to contact us first so we can try to resolve the concern.
+        </p>
+        <p>See the full <a href="/legal/privacy/">Privacy Policy</a>.</p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .info-page { min-height: 70vh; padding: 88px 0 112px; background: linear-gradient(180deg, var(--surface-grad-a), var(--surface)); }
+  .narrow { max-width: 860px; }
+  h1 { max-width: 760px; font-size: clamp(3rem, 7vw, 5rem); }
+  .lead { max-width: 760px; color: var(--muted); font-size: 1.18rem; }
+  .panel { margin-top: 24px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); }
+  .panel h2 { margin-bottom: 12px; }
+  li + li { margin-top: 8px; }
+  @media (max-width: 720px) { .info-page { padding: 68px 0 88px; } }
+</style>
