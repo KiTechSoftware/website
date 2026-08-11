@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Data Deletion Policy
-
 ## 1. Scope
 
 This policy explains how to request deletion of an account or personal information controlled by KITECH SOFTWARE LTD.

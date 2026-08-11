@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Acceptable Use Policy
-
 ## 1. Scope
 
 This policy applies when you access or use a KiTech Software website, product, service, API, hosted environment, support channel, or partner application that links to it.

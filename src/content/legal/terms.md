@@ -7,8 +7,6 @@ effectiveDate: 2026-08-06
 draft: false
 ---
 
-# Terms of Service
-
 ## 1. About these Terms
 
 These Terms of Service (the **Terms**) govern your access to and use of websites, applications, software products, cloud services, APIs, documentation, support channels, and other services provided by KITECH SOFTWARE LTD (**KiTech Software**, **KiTech**, **we**, **our**, or **us**).

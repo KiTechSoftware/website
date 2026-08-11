@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Responsible Disclosure Policy
-
 ## 1. Scope
 
 This policy applies to suspected security vulnerabilities in KiTech-operated websites, services, applications, APIs, and public repositories where KiTech is responsible for remediation.

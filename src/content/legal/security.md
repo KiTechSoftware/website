@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Security Policy
-
 ## 1. Purpose
 
 KITECH SOFTWARE LTD designs and operates software with security as a core engineering and operational requirement.

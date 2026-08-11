@@ -6,3 +6,7 @@ dist/
 .env
 .env.*
 !.env.example
+test-results/
+playwright-report/
+tests/.routes.json
+.routes-build.lock

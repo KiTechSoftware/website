@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Cookie and Local Storage Policy
-
 ## 1. Scope
 
 This policy explains how the public KiTech Software website uses cookies, local storage, and similar technologies.

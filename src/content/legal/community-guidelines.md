@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Community Guidelines
-
 ## 1. Purpose
 
 These guidelines apply to KiTech Software services that allow people to communicate, publish, collaborate, create communities, or share user-generated content.

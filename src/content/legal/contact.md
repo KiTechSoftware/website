@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Contact and Communications Policy
-
 ## 1. Official company contact
 
 KITECH SOFTWARE LTD may be contacted at:

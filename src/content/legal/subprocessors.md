@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Subprocessors and Service Providers
-
 ## 1. Scope
 
 This page identifies material third-party providers currently used to operate the public KiTech Software website.

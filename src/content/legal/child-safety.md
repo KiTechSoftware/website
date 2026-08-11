@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Child Safety Standards
-
 ## 1. Zero tolerance
 
 KiTech Software does not permit child sexual abuse material, sexual exploitation of children, grooming, trafficking, sextortion, inappropriate sexual contact with children, or activity that facilitates such harm.

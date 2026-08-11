@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Export Controls and Sanctions Policy
-
 ## 1. Scope
 
 This policy applies to the access, download, use, transfer, export, re-export, provision, and distribution of KiTech Software products, services, source code, technical information, and related support.

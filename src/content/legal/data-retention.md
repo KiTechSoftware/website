@@ -7,8 +7,6 @@ effectiveDate: 2026-08-07
 draft: false
 ---
 
-# Data Retention Policy
-
 ## 1. Purpose
 
 This policy explains the principles KITECH SOFTWARE LTD uses to determine how long personal information and business records are retained.
